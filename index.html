@@ -1,0 +1,66 @@
+<!Doctype html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Equation Step Checker (One Step)</title>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <script src="script.js" defer></script>
+        <script src="https://unpkg.com/lucide@0.383.0/dist/umd/lucide.min.js"></script>
+    </head>
+    
+    <body>
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="name">
+                <div class="icon"><i data-lucide="scale"></i></div>
+                <div>
+                    <h1 class="title">MITS - Mathematical Intelligent Tutoring System</h1>
+                    <p class="subtitle">Equation Step Checker</p>
+                </div>
+            </div>
+                
+            <div class="stats" aria-label="Session Stats">
+                <div class="stat"><i data-lucide="trophy" class="warning"></i>Solved: <strong id="stat-solved">0</strong></div>
+                <div class="stat"><i data-lucide="zap" class="warning"></i>Streak: <strong id="stat-streak">0</strong>🔥</div>
+                <div class="stat"><i data-lucide="award" class="success"></i>Accuracy: <strong id="stat-accuracy">100%</strong></div>
+            </div>
+            
+        </header>
+        
+        <!-- Work Area -->
+        <main class="workspace">
+            <section class="work-area">
+
+                <!-- Equation -->
+                <div class="equation-card">
+                    <div>
+                        <div class="label equation-label">Equation</div>
+                        <p class="current-equation" id="current-equation"></p>   
+                    </div>
+                    <div class="variable">
+                        <div class="label">Variable</div>
+                        <div class="variable-value" id="variable-value"></div>
+                    </div> 
+                </div>
+                
+                <!-- Steps Area-->
+                <div class="steps">
+                    <div class="empty" id="empty">
+                        <i data-lucide="circle-help"></i>
+                        <p class="empty-label">No steps entered yet.</p>
+                        <p class="hint">Click "Add First Step" to type your first line in solving <span id="empty-equation"></span>.</p>
+                        <button class='btn btn-one' id="first-step"><i data-lucide="plus"></i>Add First Step</button>
+                    </div>
+                    <div id="steps-list"></div>
+                </div>
+
+                <div class="footer">
+                    <button class="btn btn-two" id="next-step"><i data-lucide="plus"></i>Add Next Step</button>
+                </div>
+
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,217 @@
+:root{
+    --bg:            #060b18;
+    --header-bg:     #050914;
+    --panel:         #0b1120;
+    --border:        #1e293b;
+    --border-accent: #312e81;
+    --text:          #e2e8f0;
+    --muted:         #64748b;
+    --accent:        #4f46e5;
+    --accent-soft:   #818cf8;
+    --success:       #34d399;
+    --warn:          #f59e0b;
+    --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: ui-monospace, "SFMono-Regular", Consolas, monospace;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+}
+
+button:focus-visible{
+    outline: 2px  solid var(--accent-soft);
+    outline-offset: 2px;
+}
+
+/* Header Styling */
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border);
+}
+.name{
+    display: flex;
+    align-items: center;
+    gap:  14px;
+}
+.icon{
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: #1e1b4b;
+    border: 1px solid var(--border-accent);
+    color: var(--accent-soft)
+}
+.title{
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--accent-soft), #2dd4bf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.subtitle{
+    margin: 2px 0 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.stats{
+    display: flex;
+    align-items: center;
+    padding: 8px 4px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+.stat{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 14px;
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+.stat + .stat{
+    border-left: 1px solid var(--border);
+}
+.stat strong{
+    color: var(--text);
+}
+.stat svg{
+    width: 18px;
+    height: 18px;
+}
+.warning{
+    color: var(--warn);
+}
+.success{
+    color: var(--success);
+}
+/* Working Area */
+.workspace{
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.work-area{
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+    padding: 16px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+.equation-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border: 1px solid var(--border-accent);
+    border-radius: 12px;
+    background: linear-gradient(90deg, #14143a, #0f172a);
+}
+.label{
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.equation-label{
+    color: var(--accent-soft);
+}
+
+.current-equation{
+    margin: 4px 0 0;
+    font-family: var(--mono);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.variable{
+    min-width: 60px;
+    padding: 6px 10px;
+    text-align: right;
+    background: var(--header-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+.variable .label{
+    color: var(--muted);
+}
+.variable-value{
+    font-family: var(--mono);
+    font-weight: 700;
+    color: var(--success);    
+}
+.steps{
+    flex: 1;
+    margin-top: 16px;
+}
+.empty{
+    padding: 28px 16px;
+    text-align: center;
+    color: var(--muted);
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+}
+.empty svg{
+    width: 32px;
+    height: 32px;
+}
+.empty-label{
+    margin: 10px 0 4px;
+    font-weight: 700;
+    color: var(--text);
+}
+.hint{
+    margin: 0 0 14px; 
+    font-size: 0.8rem;
+}
+.footer{
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+
+.btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    font: 600 0.85rem var(--font);
+    border-radius: 8px;
+    cursor: pointer;
+}
+.btn svg{
+    width: 16px;
+    height: 16px;
+}
+.btn-one{
+    color: #fff;
+    background: var(--accent);
+    border: none;
+    box-shadow: 0 0 12px rgba(79, 70, 229, 0.45);
+}
+.btn-two{
+    color: var(--accent-soft);
+    background: #0f1229;
+    border: 1px solid var(--border-accent);
+}
